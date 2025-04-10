@@ -18,21 +18,55 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Boston University Society of Asian Scientists and Engineers
+email: busase@bu.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  BU SASE is dedicated to helping Asian heritage scientific and engineering professionals 
+  achieve their full potential. We focus on professional development, celebrating diversity, 
+  and community contribution while preparing our members for success in the global business world.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://busasechapter.org" # the base hostname & protocol for your site, e.g. http://example.com
+instagram_username: bu_sase
+github_username: busase
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+# Include the _pages directory and make home.html the index
+include:
+  - _pages
+  
+# Set home page as the default index
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "_pages/home.html"
+    values:
+      permalink: /
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Board
+    url: /board/
+  - title: Alumni
+    url: /alumni/
+  - title: Events
+    url: /events/
+  - title: Mentorship
+    url: /mentorship/
+  - title: Sponsors
+    url: /sponsors/
+  - title: Sign Up
+    url: /signup/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -42,14 +76,15 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - setup.sh

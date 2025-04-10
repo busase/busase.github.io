@@ -1,0 +1,33 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="/assets/images/sase/horizontal-logo.png" alt="SASE Logo" class="footer-logo">
+                <p>Boston University Society of Asian Scientists and Engineers</p>
+                <p>Empowering Asian heritage scientists and engineers in education and employment</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    {% for item in site.navigation %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Connect With Us</h3>
+                <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                <div class="social-links">
+                    <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank"
+                        aria-label="Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ site.time | date: '%Y' }} Boston University Society of Asian Scientists and Engineers. All
+                rights reserved.</p>
+        </div>
+    </div>
+</footer>
