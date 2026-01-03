@@ -57,16 +57,10 @@ navigation:
     url: /about/
   - title: Board
     url: /board/
-  - title: Alumni
-    url: /alumni/
   - title: Events
     url: /events/
-  - title: Mentorship
-    url: /mentorship/
   - title: Sponsors
     url: /sponsors/
-  - title: Sign Up
-    url: /signup/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
